@@ -7,7 +7,7 @@ settings:
   base:
     SWIFT_VERSION: "5.0"
     MARKETING_VERSION: "1.0"
-    CURRENT_PROJECT_VERSION: "1"
+    CURRENT_PROJECT_VERSION: "2"
     TARGETED_DEVICE_FAMILY: "1"
     CODE_SIGNING_ALLOWED: "NO"
     CODE_SIGNING_REQUIRED: "NO"
@@ -26,7 +26,7 @@ targets:
     info:
       path: Support/App-Info.plist
       properties:
-        CFBundleDisplayName: Ada Hayvanları
+        CFBundleDisplayName: Ada Hayvanlari
         NSSupportsLiveActivities: true
         UILaunchScreen: {}
         UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
@@ -44,6 +44,6 @@ targets:
     info:
       path: Support/Widget-Info.plist
       properties:
-        CFBundleDisplayName: Ada Hayvanları
+        CFBundleDisplayName: Ada Widget
         NSExtension:
           NSExtensionPointIdentifier: com.apple.widgetkit-extension

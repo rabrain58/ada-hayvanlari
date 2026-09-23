@@ -1,0 +1,49 @@
+name: PetIsland
+options:
+  bundleIdPrefix: com.petisland
+  deploymentTarget:
+    iOS: "16.2"
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    TARGETED_DEVICE_FAMILY: "1"
+    CODE_SIGNING_ALLOWED: "NO"
+    CODE_SIGNING_REQUIRED: "NO"
+    CODE_SIGN_IDENTITY: ""
+    DEVELOPMENT_TEAM: ""
+targets:
+  PetIsland:
+    type: application
+    platform: iOS
+    sources:
+      - App
+      - Shared
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.petisland.app
+    info:
+      path: Support/App-Info.plist
+      properties:
+        CFBundleDisplayName: Ada Hayvanları
+        NSSupportsLiveActivities: true
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+    dependencies:
+      - target: PetWidget
+  PetWidget:
+    type: app-extension
+    platform: iOS
+    sources:
+      - Widget
+      - Shared
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.petisland.app.widget
+    info:
+      path: Support/Widget-Info.plist
+      properties:
+        CFBundleDisplayName: Ada Hayvanları
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
